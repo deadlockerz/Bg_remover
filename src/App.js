@@ -1,10 +1,14 @@
 import React from 'react';
-import Nav from "./components/Header"
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
 
 const App = () => {
   return (
     <>
-      <Nav></Nav>
+      <Header />
+      <Home />
+      <Footer />
     </>
   );
 };
