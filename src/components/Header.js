@@ -1,7 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import logo from '../assets/logo.png';
+import logoHover from '../assets/logo_hover.png';
+import removeBg from '../assets/removeBg.png';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
+  const [company, setCompany] = useState(logo);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const crossRef = useRef(null);
@@ -28,20 +32,32 @@ const Header = () => {
     <header className='sticky top-0 bg-white bg-opacity-80 z-50 select-none'>
       <div className='container mx-auto'>
         <div className='relative flex items-center justify-between'>
-          <div className='flex items-center flex-row '>
-            <a
-              href='/'
+          <div
+            className='flex items-center flex-row '
+            onMouseOver={() => {
+              setCompany(logoHover);
+            }}
+            onMouseOut={() => {
+              setCompany(logo);
+            }}
+          >
+            <Link
+              to='/'
               className='flex w-auto  py-3' // Adjusted padding here
             >
               <img
-                src={logo}
+                src={company}
                 alt='Testify'
-                className='h-auto max-h-10 mr-4'
+                className='h-auto max-h-10 mr-4 '
               />
               <div className='text-blue-500 text-2xl custom-font p-1'>
-                Testify
+                <img
+                  src={removeBg}
+                  alt='Testify'
+                  className='h-auto max-h-10 mr-4 w-44'
+                />
               </div>
-            </a>
+            </Link>
           </div>
 
           <div className='flex items-center justify-center'>
@@ -74,47 +90,40 @@ const Header = () => {
             >
               <ul className='block lg:flex'>
                 <li onClick={() => setMobileMenuOpen(false)}>
-                  <a
-                    href='/courses'
+                  <Link
+                    to='/'
                     className='flex py-2 text-base font-medium text-body-color hover:text-dark dark:text-dark-6 dark:hover:text-black lg:ml-12 lg:inline-flex'
                   >
-                    Courses
-                  </a>
+                    Home
+                  </Link>
                 </li>
                 <li onClick={() => setMobileMenuOpen(false)}>
-                  <a
-                    href='/practice'
+                  <Link
+                    to='/howToUse'
                     className='flex py-2 text-base font-medium text-body-color hover:text-dark dark:text-dark-6 dark:hover:text-black lg:ml-12 lg:inline-flex'
                   >
-                    Practice
-                  </a>
+                    How to use
+                  </Link>
                 </li>
-                <li onClick={() => setMobileMenuOpen(false)}>
-                  <a
-                    href='/cart'
-                    className='flex py-2 text-base font-medium text-body-color hover:text-dark dark:text-dark-6 dark:hover:text-black lg:ml-12 lg:inline-flex'
-                  >
-                    Cart
-                  </a>
-                </li>
+
                 {/* Render Login and SignUp as conditionally */}
                 {mobileMenuOpen && window.innerWidth <= 640 && (
                   <>
                     <li onClick={() => setMobileMenuOpen(false)}>
-                      <a
-                        href='/login'
+                      <Link
+                        to='/login'
                         className='flex py-2 text-base font-medium text-body-color hover:text-dark dark:text-dark-6 dark:hover:text-black lg:ml-12 lg:inline-flex'
                       >
                         Login
-                      </a>
+                      </Link>
                     </li>
                     <li onClick={() => setMobileMenuOpen(false)}>
-                      <a
-                        href='/forgetPass'
+                      <Link
+                        to='/forgetPass'
                         className='flex py-2 text-base font-medium text-body-color hover:text-dark dark:text-dark-6 dark:hover:text-black lg:ml-12 lg:inline-flex'
                       >
                         SignUp
-                      </a>
+                      </Link>
                     </li>
                   </>
                 )}
@@ -123,19 +132,19 @@ const Header = () => {
           </div>
           <div className='flex justify-end'>
             <div className='hidden justify-end pr-16 sm:flex lg:pr-0 '>
-              <a
-                href='/login'
+              <Link
+                to='/login'
                 className='px-7 py-2 text-base font-medium text-dark hover:text-primary dark:text-black'
               >
                 Login
-              </a>
+              </Link>
 
-              <a
-                href='/signup'
+              <Link
+                to='/signup'
                 className='px-7 py-2 text-base font-medium text-dark hover:text-primary dark:text-black'
               >
                 SignUp
-              </a>
+              </Link>
             </div>
           </div>
         </div>
