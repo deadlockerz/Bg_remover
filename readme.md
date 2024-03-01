@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # BG_Remover
 
 ## WEBSITE LINK:
@@ -11,4 +9,4 @@
 ### `npm test` --> to test
 
 ### `npm run build`-> to build
->>>>>>> 431c48760863c0332c606c7b3c3793278d0f8a71
+
