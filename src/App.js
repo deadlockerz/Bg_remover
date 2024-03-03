@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import HowToUse from './pages/HowToUse';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
+import ErrorPage from './pages/ErrorPage';
 
 const App = () => {
   return (
@@ -30,10 +31,17 @@ const router = createBrowserRouter([
         path: '/login',
         element: <Login />,
       },
-      { path: '/signup', element: <SignUp /> },
+      {
+        path: '/signup',
+        element: <SignUp />,
+      },
       {
         path: '/howToUse',
         element: <HowToUse />,
+      },
+      {
+        path: '*',
+        element: <ErrorPage />,
       },
     ],
   },

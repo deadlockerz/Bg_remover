@@ -35,26 +35,30 @@ const Header = () => {
           <div
             className='flex items-center flex-row '
             onMouseOver={() => {
-              setCompany(logoHover);
+              setTimeout(() => {
+                setCompany(logoHover);
+              }, 150);
             }}
             onMouseOut={() => {
-              setCompany(logo);
+              setTimeout(() => {
+                setCompany(logo);
+              }, 150);
             }}
           >
             <Link
               to='/'
-              className='flex w-auto  py-3' // Adjusted padding here
+              className='flex w-auto  py-3 '
             >
               <img
                 src={company}
-                alt='Testify'
-                className='h-auto max-h-10 mr-4 '
+                alt='L'
+                className='sm:max-h-10 mr-4 w-12 ml-2 '
               />
               <div className='text-blue-500 text-2xl custom-font p-1'>
                 <img
                   src={removeBg}
-                  alt='Testify'
-                  className='h-auto max-h-10 mr-4 w-44'
+                  alt='remove Bg'
+                  className='h-auto max-h-10 mr-4 w-40'
                 />
               </div>
             </Link>
