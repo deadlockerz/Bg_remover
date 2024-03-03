@@ -4,8 +4,8 @@ import Footer from './components/Footer';
 import { createBrowserRouter, Outlet } from 'react-router-dom';
 import Home from './pages/Home';
 import HowToUse from './pages/HowToUse';
-import Login from './pages/Login';
-import SignUp from './pages/SignUp';
+import LoginPage from './pages/LoginPage';
+import SignUpPage  from './pages/SignUpPage';
 import ErrorPage from './pages/ErrorPage';
 
 const App = () => {
@@ -29,11 +29,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/login',
-        element: <Login />,
+        element: <LoginPage />,
       },
       {
         path: '/signup',
-        element: <SignUp />,
+        element: <SignUpPage  />,
       },
       {
         path: '/howToUse',

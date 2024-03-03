@@ -2,11 +2,24 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <>
-      
+    <>  
        
-      <footer className="flex flex-row space-y-10 bg-slate-500 items-stretch justify-around sticky bottom-0">
-        <div className="flex flex-col justify-center space-x-50">
+      {/* <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        className="block sticky footer"
+        style={{ position: "absolute", bottom: 0 }}
+      >
+        <path
+          fill="#475569"
+          fillOpacity="1"
+          d="M0,192L60,208C120,224,240,256,360,256C480,256,600,224,720,229.3C840,235,960,277,1080,282.7C1200,288,1320,256,1380,240L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg> */}
+      
+      <footer className="flex flex-col sm:flex-row space-y-10 bg-slate-600 items-center justify-around sm:mt-[-45px]">
+      
+        <div className="flex flex-col justify-center space-y-5 sm:space-y-0 sm:space-x-10">
           <button
             type="button"
             className="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-4 py-2 text-center m-2"
