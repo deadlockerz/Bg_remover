@@ -1,7 +1,7 @@
 import React from 'react';
 import errorImg from '../assets/errorImg.gif';
 
-const ErrorPage = () => {
+const NotFound = () => {
   return (
     <div className='flex  items-center justify-center h-screen bg-white px-4 select-none'>
       <div className='flex  flex-col  sm:flex-row   '>
@@ -40,4 +40,4 @@ const ErrorPage = () => {
   );
 };
 
-export default ErrorPage;
+export default NotFound;
