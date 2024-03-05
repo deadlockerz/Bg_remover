@@ -2,13 +2,16 @@ import { useState, useEffect, useRef } from 'react';
 import logo from '../assets/logo.png';
 import logoHover from '../assets/logo_hover.png';
 import removeBg from '../assets/removeBg.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+// import {useDispatch, useSelector} from 'react-redux';
+import React from 'react';
+
 
 const Header = () => {
   const [company, setCompany] = useState(logo);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const menuRef = useRef(null);
-  const crossRef = useRef(null);
+  const crossRef = useRef(null); 
 
   useEffect(() => {
     function handleClickOutside(event) {

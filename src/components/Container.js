@@ -2,8 +2,8 @@ import React from 'react';
 
 const Main = () => {
   return (
-    <div className=' mx-auto px-4 py-8 select-none md:mt-32'>
-      <div className='flex flex-col lg:flex-row items-center lg:items-start justify-center '>
+    <div className='mx-auto px-4 py-8 select-none md:mt-32 '>
+      <div className='flex flex-col lg:flex-row items-center  border border-gray shadow-lg rounded-lg lg:items-start justify-center '>
         <div className='relative group flex flex-col max-w-md mt-8 md:mt-1'>
           <div className='text-center text-3xl font-bold text-gray-800'></div>
           <div className='w-full flex flex-col sm:justify-center sm:items-center sm:gap-8 sm:pt-8 sm:pb-16 '>
