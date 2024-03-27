@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
-const UserSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     name: String,
     email: String,
     password: String
 })
 
-const UserModel = mongoose.model("user",UserSchema)
-module.exports=UserModel;
+const User = mongoose.model("User",userSchema) // both user shuld be same
+module.exports=User;

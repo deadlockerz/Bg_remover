@@ -51,3 +51,51 @@ const router = createBrowserRouter([
 ]);
 
 export default router;
+
+
+
+// import React, { useState } from 'react';
+// import { BrowserRouter as Router, Route } from 'react-router-dom';
+// import Switch from "react-switch";
+// import Header from './components/Header';
+// import Footer from './components/Footer';
+// import Home from './pages/Home';
+// import HowToUse from './pages/HowToUse';
+// import LoginPage from './pages/LoginPage';
+// import SignUpPage from './pages/SignUpPage';
+// import NotFound from './pages/NotFound';
+// import Error from './pages/Error';
+  
+// const App = () => {
+//   const [user, setLoginUser] = useState({
+//     // name:"", 
+//     // email:"",
+//     // password:""
+//   });
+
+//   return (
+//     <Router>
+//       <div>
+//         <Header />
+//         <Switch>
+//           <Route exact path="/" component={Home} />
+//           <Route
+//             path="/login"
+//             render={(props) => <LoginPage {...props} setLoginUser={setLoginUser} />}
+//           />
+//           <Route path="/signup" component={SignUpPage} />
+//           <Route
+//             path="/howToUse"
+//             render={(props) =>
+//               user && user._id ? <HowToUse {...props} /> : <LoginPage {...props} />
+//             }
+//           />
+//           <Route component={NotFound} />
+//         </Switch>
+//         <Footer />
+//       </div>
+//     </Router>
+//   );
+// };
+
+// export default App;
