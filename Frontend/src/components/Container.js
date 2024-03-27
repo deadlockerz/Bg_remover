@@ -28,6 +28,23 @@ const Main = () => {
 
   }
 
+  const downloadFile=()=> {
+    if (!bgremove) {
+        console.error('No image to download.');
+        return;
+    }
+
+    const anchorElement = document.createElement('a');
+    anchorElement.href = bgremove;
+    anchorElement.download = 'bg_removed_image.png';
+    document.body.appendChild(anchorElement);
+
+    anchorElement.click();
+
+    document.body.removeChild(anchorElement);
+}
+
+
   return (
     <div className='mx-auto px-4 py-8 select-none md:mt-32 '>
       <div className='flex flex-col lg:flex-row items-center  border border-gray shadow-lg rounded-lg lg:items-start justify-center '>
@@ -63,6 +80,13 @@ const Main = () => {
             </div>
           </div>
           <div>{bgremove && <img src={bgremove} alt="removed image" />} </div>
+          <button
+              onClick={downloadFile}
+              type='button'
+              className='border border-transparent rounded-full font-bold transition ease-in-out text-center font-body no-underline hover:no-underline inline-flex items-center justify-center text-lg md:text-2xl px-6 md:px-8 py-2 md:py-2.5 text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-700 active:scale-[0.98] focus:outline-none focus-visible:outline-none focus:ring-none focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-blue-700'
+            >
+              Download Image
+            </button>
           <div className='max-w-md'></div>
         </div>
       </div>
