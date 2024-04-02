@@ -4,7 +4,7 @@ const Output = ({ bgImage }) => {
   return (
     <div className="bg-white border border-secondary-main p-3 relative">
       <div className="relative">
-        <div className="absolute opacity-10 inset-0 grid grid-cols-8 grid-rows-8 z-0">
+        <div className="absolute opacity-5 inset-0 grid grid-cols-8 grid-rows-8 z-0">
           {Array.from({ length: 64 }).map((_, index) => (
             <div
               key={index}
