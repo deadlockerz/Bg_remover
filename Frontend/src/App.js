@@ -1,14 +1,14 @@
-import React from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import { createBrowserRouter, Outlet } from 'react-router-dom';
-import Home from './pages/Home'; 
-import HowToUse from './pages/HowToUse';
-import LoginPage from './pages/LoginPage';
-import SignUpPage from './pages/SignUpPage';
-import NotFound from './pages/NotFound';
-import Error from './pages/Error';
-
+import React from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { createBrowserRouter, Outlet } from "react-router-dom";
+import Home from "./pages/Home";
+import HowToUse from "./pages/HowToUse";
+import LoginPage from "./pages/LoginPage";
+import SignUpPage from "./pages/SignUpPage";
+import NotFound from "./pages/NotFound";
+import Error from "./pages/Error";
+import Result from "./pages/Result";
 
 const App = () => {
   return (
@@ -22,37 +22,39 @@ const App = () => {
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
     errorElement: <Error />,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <Home />,
       },
       {
-        path: 'login',
+        path: "login",
         element: <LoginPage />,
       },
       {
-        path: 'signup',
+        path: "signup",
         element: <SignUpPage />,
       },
       {
-        path: 'howToUse',
+        path: "howToUse",
         element: <HowToUse />,
+      },
+      {
+        path: "result",
+        element: <Result />,
       },
     ],
   },
   {
-    path: '*',
+    path: "*",
     element: <NotFound />,
   },
 ]);
 
 export default router;
-
-
 
 // import React, { useState } from 'react';
 // import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -65,10 +67,10 @@ export default router;
 // import SignUpPage from './pages/SignUpPage';
 // import NotFound from './pages/NotFound';
 // import Error from './pages/Error';
-  
+
 // const App = () => {
 //   const [user, setLoginUser] = useState({
-//     // name:"", 
+//     // name:"",
 //     // email:"",
 //     // password:""
 //   });
