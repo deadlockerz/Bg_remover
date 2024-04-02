@@ -1,7 +1,9 @@
 import React from "react";
 import Container from "../components/Container";
 import ContainerHeader from "../components/ContainerHeader";
-import ContainerFooter from "../components/ContainerFooter";
+import ImgCanva from "./ImgCanva";
+import cat from "../assets/cat.png";
+import cat2 from "../assets/cat2.png";
 
 const Home = () => {
   return (
@@ -14,7 +16,7 @@ const Home = () => {
           <Container />
         </div>
       </div>
-      <ContainerFooter />
+      <ImgCanva beforeImg={cat} afterImg={cat2} width={"200px"} />
     </div>
   );
 };
