@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../components/Container";
 import ContainerHeader from "../components/ContainerHeader";
-import ImgCanva from "./ImgCanva";
+import ImgCanva from "../components/ImgCanva";
 import cat from "../assets/cat.png";
 import cat2 from "../assets/cat2.png";
 
