@@ -52,14 +52,14 @@ const Result = () => {
                 <button
                   type="button"
                   className="flex justify-center items-center w-full md:w-auto border border-transparent rounded-full font-bold 
-                  transition ease-in-out text-center font-body no-underline hover:no-underline
-                  text-sm md:text-md px-6 md:px-8 py-2 md:py-2.5
-                  text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-700 
-                  active:scale-[0.98] focus:outline-none focus-visible:outline-none 
-                  focus:ring-none focus-visible:ring focus-visible:ring-offset-2 
-                  focus-visible:ring-blue-700 my-2"
+    transition ease-in-out text-center font-body no-underline hover:no-underline
+    text-sm md:text-md px-6 md:px-8 py-2 md:py-2.5
+    text-white bg-gray-500 hover:bg-gray-600 active:bg-gray-600 
+    active:scale-[0.98] focus:outline-none focus-visible:outline-none 
+    focus:ring-none focus-visible:ring focus-visible:ring-offset-2 
+    focus-visible:ring-gray-600 my-2"
                 >
-                  Remove Background
+                  Another Image
                 </button>
               </Link>
             </div>

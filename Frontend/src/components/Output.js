@@ -18,6 +18,7 @@ const Output = ({ bgImage }) => {
         </div>
         <img
           src={bgImage}
+          loading="eager"
           alt="Background"
           draggable="false"
           className="object-center w-full h-auto  z-10"

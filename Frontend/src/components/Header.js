@@ -50,12 +50,14 @@ const Header = () => {
             <Link to="/" className="flex w-auto  py-3 ">
               <img
                 src={company}
+                loading="eager"
                 alt="L"
                 className="sm:max-h-10 mr-4 w-12 ml-2 "
               />
               <div className="text-blue-500 text-2xl custom-font p-1">
                 <img
                   src={removeBg}
+                  loading="eager"
                   alt="remove Bg"
                   className="h-auto max-h-10 mr-4 w-40"
                 />
