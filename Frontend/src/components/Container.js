@@ -25,7 +25,7 @@ const Main = () => {
   useEffect(() => {
     if (!image) return;
 
-    const apikey = "RWLHGmgSGxeHdwrrXB73DpZD";
+    const apikey ="iWndzcDqRZ3AXT84WJa1zetC";
     const url = "https://api.remove.bg/v1.0/removebg";
 
     const formData = new FormData();
