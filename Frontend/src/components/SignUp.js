@@ -109,11 +109,11 @@ const SignUp = () => {
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
                 Canfirm Password
-              </label>
+              </label> 
               <div className="mt-2">
                 <input
                   // onChange={(e) => setPassword(e.target.value)}
-                  id="password"
+                  id="Canfirm password"
                   name="password"
                   type="password"
                   autoComplete="current-password"
