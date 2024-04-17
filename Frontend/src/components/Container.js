@@ -10,16 +10,24 @@ const override = {
   // Adjust this value as needed to position the loader
 };
 
-const Main = () => {
+const Container = (props) => {
+  const { imgFile } = props;
   const [image, setImage] = useState(null);
-  const [bgremove, setBgremove] = useState(null); // eslint-disable-line no-unused-vars
-  const [loading, setLoading] = useState(false); // Initially set to false
+  const [bgremove, setBgremove] = useState(null);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  console.log(bgremove, imgFile);
+  // Set image state when imgFile changes
+  useEffect(() => {
+    if (imgFile) {
+      setImage(imgFile);
+    }
+  }, [imgFile]);
 
   const handleChange = (e) => {
     const file = e.target.files[0];
     setImage(file);
-    setLoading(true); // Start loader when file is selected
+    setLoading(true);
   };
 
   useEffect(() => {
@@ -45,13 +53,13 @@ const Main = () => {
         reader.onloadend = () => {
           const result = reader.result;
           setBgremove(result);
-          setLoading(false); // Turn off loader when background removal is done
+          setLoading(false);
           navigate("/result", { state: { bgremove: result } });
         };
         reader.readAsDataURL(blob);
       })
       .catch((error) => {
-        setLoading(false); // Turn off loader in case of error
+        setLoading(false);
         console.error(error);
       });
   }, [image, navigate]);
@@ -104,4 +112,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Container;
